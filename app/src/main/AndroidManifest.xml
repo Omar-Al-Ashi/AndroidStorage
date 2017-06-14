@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.examples.ict370.files" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/databasepic"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.csi370.filesandsharedpreferences.ActivitySharedPreferences"
+            android:label="@string/title_activity_activity_shared_preferences" >
+        </activity>
+        <activity
+            android:name="com.csi370.filesandsharedpreferences.Activity_Database"
+            android:label="@string/title_activity_activity__database" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.examples.ict370.files.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.csi370.filesandsharedpreferences.DisplayContact"
+            android:label="@string/title_activity_display_contact" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csi370.filesandsharedpreferences.Activity_Database" />
+        </activity>
+        <activity
+            android:name="com.csi370.filesandsharedpreferences.Save2SDActivity"
+            android:label="@string/title_activity_save2_sd" >
+        </activity>
+        <activity
+            android:name="com.csi370.filesandsharedpreferences.SavingFiles_Int_Ext_2_Activity"
+            android:label="@string/title_activity_saving_files__int__ext_2_" >
+        </activity>
+    </application>
+
+</manifest>
